@@ -4,4 +4,4 @@
 <br>
 
 # Index
-- [Arrays]()
+- [Arrays](https://github.com/thameemk612/SDE-PlacementQuestions/tree/master/Arrays)
