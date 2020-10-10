@@ -1,14 +1,23 @@
 #include<iostream>
 using namespace std;
-int main()
+void search(int array[],int search_element)
 {
-    int array[] = {5,7,8,9,10};
-    int search_element = 9;
     int array_size = sizeof(array)/sizeof(array[0]);
-    for(int i=0;i<array_size;i++) 
+    int res=-1,i;
+    for(i=0;i<array_size;i++) 
     {
         if(array[i]==search_element)
-            cout<<"Element found at index: "<<i<<"\n";
+            res = i;         
     }
+    if(res!=-1)
+       cout<<"Element fount at: "<<i<<"\n";
+    else
+        cout<<"Element not found\n";
+}
+int main()
+{
+    int arr[] = {5,7,8,9,10};
+    int search_element = 9;
+    search(arr,search_element);   
     return 0;
 }
