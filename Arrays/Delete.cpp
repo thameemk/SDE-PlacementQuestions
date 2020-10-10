@@ -1,24 +1,27 @@
 #include<iostream>
 using namespace std;
-int main()
+int new_array[] = {4,5,56,98};
+void printArray(int arr[],int array_size)
 {
-    int array[] = {4,5,56,98};
-    int array_size = sizeof(array)/sizeof(array[0]); 
-    cout<<"Array before deletion\n";
-    for(int i=0;i<array_size;i++)
-        cout<<array[i]<<" ";
-    //delete an element from array
-    int del_element = 40; 
+     for(int i=0;i<array_size;i++)
+        cout<<arr[i]<<" ";
+}
+
+void deleteElement(int arr[],int index,int array_size)
+{    
     int j;
-    for(j=0;j<array_size;j++){
-        if(array[j]==del_element)
-            break;
-    }
-    array_size = array_size-1;   
-    for(j=2;j<array_size;j++)
-        array[j-1] = array[j];
-    cout<<"Array after deletion\n";
-    for(int i=0;i<array_size;i++)
-        cout<<array[i]<<" ";
+    for(j=index;j<array_size;j++)
+        arr[j] = arr[j+1];   
+}
+
+int main()
+{  
+    int array_size = sizeof(new_array)/sizeof(new_array[0]); 
+    cout<<"Array before deletion\n";
+    printArray(new_array,array_size);
+    array_size = array_size-1;
+    deleteElement(new_array,2,array_size);
+    cout<<"\nArray after deletion\n";
+    printArray(new_array,array_size);
     return 0;    
 }

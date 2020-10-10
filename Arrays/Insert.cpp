@@ -1,22 +1,28 @@
 #include<iostream>
 using namespace std;
-int main()
+int new_array[] = {4,5,56,98};
+void printArray(int arr[],int array_size)
 {
-    int array[] = {4,5,56,98};
-    int array_size = sizeof(array)/sizeof(array[0]); 
-    cout<<"Array before insertion\n";
-    for(int i=0;i<array_size;i++)
-        cout<<array[i]<<" ";
-    //insert to an array
-    int new_element = 40; 
-    int new_element_index = 2;
-    array_size = array_size+1;
+     for(int i=0;i<array_size;i++)
+        cout<<arr[i]<<" ";
+}
+
+void insertElement(int arr[],int new_element,int index,int array_size)
+{    
     int j;
-    for(j=2;j<array_size;j++)
-        array[j+1] = array[j];
-    array[j] = new_element;
-    cout<<"Array after insertion\n";
-    for(int i=0;i<array_size;i++)
-        cout<<array[i]<<" ";
+    for(j=array_size-1;j>index;j--)
+        arr[j] = arr[j-1];
+    arr[index] = new_element;
+}
+
+int main()
+{  
+    int array_size = sizeof(new_array)/sizeof(new_array[0]); 
+    cout<<"Array before insertion\n";
+    printArray(new_array,array_size);
+    array_size = array_size+1;
+    insertElement(new_array,40,2,array_size);
+    cout<<"\nArray after insertion\n";
+    printArray(new_array,array_size);
     return 0;    
 }
