@@ -1,0 +1,2 @@
+# Ignore files with extension `.exe`
+*.exe
