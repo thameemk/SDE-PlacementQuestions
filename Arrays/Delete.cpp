@@ -10,9 +10,10 @@ int main()
     //delete an element from array
     int del_element = 40; 
     int j;
-    for(j=0;j<array_size;j++)
+    for(j=0;j<array_size;j++){
         if(array[j]==del_element)
             break;
+    }
     array_size = array_size-1;   
     for(j=2;j<array_size;j++)
         array[j-1] = array[j];
