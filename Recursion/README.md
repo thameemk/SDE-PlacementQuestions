@@ -1,6 +1,6 @@
 # Recursion
 
-What is recursion ?<br>
+### What is recursion ?<br>
 When function is called within the same function, it is known as recursion
 
 ```cpp
@@ -18,4 +18,9 @@ int main()
     ... .. ...
 }
 ```
+
+### What is base case?
+A base case is the bottom point of a recursive program or we will get the output at this stage
+
+Example:- Factorial of a number. Here the end point is 1! 
 
