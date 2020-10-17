@@ -8,15 +8,25 @@ void substring(string s) //manual method
         {            
             for (int k = j; k <= j+i-1; k++) 
                 cout << s[k];             
-            cout << endl;
+            cout << " ";
         }
     }
 }
+void substringRecusrsion(string s,string current="",int i=0) //using recursion
+{
+    if(i==s.length()){
+        cout<<current<<" ";return;
+    }  
+    substringRecusrsion(s,current,i+1);
+    substringRecusrsion(s,current+s[i],i+1);        
+}
+
 int main()
 {
     string s;
     cout<<"Enter s string:";
     cin>>s;
-    substring(s);
+    // substring(s);
+    substringRecusrsion(s);
     return 0;
 }
