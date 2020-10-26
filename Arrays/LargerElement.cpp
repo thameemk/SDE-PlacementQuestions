@@ -2,7 +2,7 @@
 using namespace std;
 int getLarge(int array[], int array_size)
 {
-    int res=0;   
+    int res=array[0];   
     for(int i=0;i<array_size;i++)
     {
         if(array[res]<array[i])
