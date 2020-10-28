@@ -12,6 +12,8 @@ void patternSearch(string s,string p)
     }
 }
 
+
+// Naive Algorithm
 void patternSearchManual(string s,string p)
 {
     for(int i=0;i<=s.length()-p.length();i++)
