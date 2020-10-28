@@ -14,7 +14,7 @@ void patternSearch(string s,string p)
 }
 
 
-// Naive Algorithm
+// Naive Algorithm  O((n-m+1)xm)
 void patternSearchManual(string s,string p)
 {
     for(int i=0;i<=s.length()-p.length();i++)
@@ -30,6 +30,26 @@ void patternSearchManual(string s,string p)
     }
 }
 
+// Naive Algorithm - optimized O(n)
+void patternSearchOptimized(string s,string p)
+{
+    for(int i=0;i<=s.length()-p.length();)
+    {
+        int j;
+        for(j=0;j<p.length();j++)
+        {
+            if(s[i+j]!=p[j])
+                break;
+        }
+        if(j==p.length())
+             cout<<"Pattern found at "<<i<<"\n";
+        if(j==0)
+            i++;
+        else
+            i = i+j;     
+    }
+}
+
 int main()
 {
     string s,p;
@@ -37,5 +57,7 @@ int main()
     patternSearch(s,p);
     cout<<"--------------------\n";
     patternSearchManual(s,p);
+    cout<<"--------------------\n";
+    patternSearchOptimized(s,p);
     return 0;
 }
