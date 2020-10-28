@@ -14,7 +14,17 @@ void patternSearch(string s,string p)
 
 void patternSearchManual(string s,string p)
 {
-    
+    for(int i=0;i<=s.length()-p.length();i++)
+    {
+        int j;
+        for(j=0;j<p.length();j++)
+        {
+            if(s[i+j]!=p[j])
+                break;
+        }
+        if(j==p.length())
+             cout<<"Pattern found at "<<i<<"\n";
+    }
 }
 
 int main()
@@ -22,5 +32,7 @@ int main()
     string s,p;
     cin>>s>>p;
     patternSearch(s,p);
+    cout<<"--------------------\n";
+    patternSearchManual(s,p);
     return 0;
 }
