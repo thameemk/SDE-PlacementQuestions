@@ -5,6 +5,7 @@ using namespace std;
 void patternSearch(string s,string p)
 {   
     int flag = s.find(p);
+    //  while(flag!=-1)
     while(flag!=string::npos)
     {
         cout<<"Pattern found at "<<flag<<"\n";
