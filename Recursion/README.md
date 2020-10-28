@@ -29,3 +29,13 @@ Example:- Factorial of a number. Here the end point is 1!
 - Circular Flow 
 - Tail Recursion
 
+### Questions
+- Factorial of given number
+- Factorial of given number using tail recursion
+- Fibonacci Series
+- Palindrome
+- Sub Set
+- Sum of digits
+- Print 1 To N Without Loop or N to 1
+- Rope of Length
+- Tower of Honai

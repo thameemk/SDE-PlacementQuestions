@@ -31,6 +31,7 @@ void patternSearchManual(string s,string p)
 }
 
 // Naive Algorithm - optimized O(n)
+// When all characters in the pattern are distict
 void patternSearchOptimized(string s,string p)
 {
     for(int i=0;i<=s.length()-p.length();)
@@ -49,6 +50,10 @@ void patternSearchOptimized(string s,string p)
             i = i+j;     
     }
 }
+
+// Rabin karp
+// KMP
+// Sufix tree
 
 int main()
 {
