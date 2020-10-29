@@ -38,4 +38,4 @@ Example:- Factorial of a number. Here the end point is 1!
 - Sum of digits
 - Print 1 To N Without Loop or N to 1
 - Rope of Length
-- Tower of Honai
+- Tower of Hanoi
