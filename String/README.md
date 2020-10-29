@@ -20,5 +20,13 @@
     // 2=>end index (exclusive)
 ```
 
+#### Problems
+- Anagram
+- Lexico Graphic Rank
+- left most repeating
+- left most non repeating
+- pattern search
+
+
 
 
