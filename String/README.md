@@ -26,6 +26,7 @@
 - left most repeating
 - left most non repeating
 - pattern search
+- Are rotations
 
 
 
