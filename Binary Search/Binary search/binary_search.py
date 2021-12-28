@@ -1,16 +1,9 @@
-#  [Only For Educational Purpose]
-#  Project : SDE-Placement Questions
+#  Project : SDE Placement Questions
 #  Filename : binary_search.py
 #  Author : thameem
-#  Created  time : Wed, 29 Dec 2021 at 12:30 AM India Standard Time
-#  Last modified time : Wed, 29 Dec 2021 at 12:26 AM India Standard Time
+#  Created  time : Wed, 29 Dec 2021 at 12:54 AM India Standard Time
+#  Last modified time : Wed, 29 Dec 2021 at 12:30 AM India Standard Time
 
-#  [Only For Educational Purpose]
-#  Project : SDE-Placement Questions
-#  Filename : binary_search.py
-#  Author : thameem
-#  Created  time : Mon, 27 Dec 2021 at 11:27 PM India Standard Time
-#  Last modified time : Mon, 27 Dec 2021 at 11:27 PM India Standard Time
 from beartype import beartype
 
 

@@ -1,9 +1,8 @@
-#  [Only For Educational Purpose]
-#  Project : SDE-Placement Questions
+#  Project : SDE Placement Questions
 #  Filename : two_sum.py
 #  Author : thameem
-#  Created  time : Thu, 11 Nov 2021 at 12:26 AM India Standard Time
-#  Last modified time : Thu, 11 Nov 2021 at 12:24 AM India Standard Time
+#  Created  time : Wed, 29 Dec 2021 at 12:54 AM India Standard Time
+#  Last modified time : Thu, 11 Nov 2021 at 12:27 AM India Standard Time
 
 from beartype import beartype
 
