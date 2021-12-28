@@ -20,13 +20,18 @@ class BinarySearch:
 
     @beartype
     def _search(self: 'BinarySearch') -> None:
-        if self.target_number >= self.numbers[self.base_index]:
+        if self.numbers[self.base_index] <= self.target_number <= self.numbers[self.end_index]:
             self.middle_index = self.base_index + (self.end_index - self.base_index) // 2
             if self.numbers[self.middle_index] == self.target_number:
                 self.target_index = self.middle_index
             elif self.numbers[self.middle_index] > self.target_number:
                 self.end_index = self.middle_index - 1
                 self._search()
-            elif self.numbers[self.middle_index] > self.target_number:
+            elif self.numbers[self.middle_index] < self.target_number:
                 self.base_index = self.middle_index + 1
                 self._search()
+
+
+if __name__ == '__main__':
+    result = BinarySearch(numbers=[-1, 0, 3, 5, 9, 12], target_number=13)
+    print(result.target_index)
