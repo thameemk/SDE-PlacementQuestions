@@ -20,7 +20,7 @@ class BinarySearch:
 
     @beartype
     def _search(self: 'BinarySearch') -> None:
-        if self.target_number >= self.numbers[self.base_index]:
+        if self.numbers[self.base_index] <= self.target_number <= self.numbers[self.end_index]:
             self.middle_index = self.base_index + (self.end_index - self.base_index) // 2
             if self.numbers[self.middle_index] == self.target_number:
                 self.target_index = self.middle_index
