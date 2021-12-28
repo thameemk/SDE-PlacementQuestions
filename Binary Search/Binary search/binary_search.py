@@ -2,6 +2,13 @@
 #  Project : SDE-Placement Questions
 #  Filename : binary_search.py
 #  Author : thameem
+#  Created  time : Wed, 29 Dec 2021 at 12:30 AM India Standard Time
+#  Last modified time : Wed, 29 Dec 2021 at 12:26 AM India Standard Time
+
+#  [Only For Educational Purpose]
+#  Project : SDE-Placement Questions
+#  Filename : binary_search.py
+#  Author : thameem
 #  Created  time : Mon, 27 Dec 2021 at 11:27 PM India Standard Time
 #  Last modified time : Mon, 27 Dec 2021 at 11:27 PM India Standard Time
 from beartype import beartype
@@ -10,7 +17,7 @@ from beartype import beartype
 class BinarySearch:
     @beartype
     def __init__(self: 'BinarySearch', numbers: list[int], target_number: int) -> None:
-        self.numbers = sorted(numbers)
+        self.numbers = numbers
         self.target_number = target_number
         self.target_index = -1
         self.base_index = 0
