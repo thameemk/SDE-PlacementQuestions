@@ -18,12 +18,18 @@ class SetBadVersion:
 class FirstBadVersion:
     @beartype
     def __init__(self: 'FirstBadVersion', latest_version: int) -> None:
-        first_version = 1
-        while first_version < latest_version:
-            mid_version = first_version + (latest_version - first_version) // 2
-            if SetBadVersion.is_bad_version(mid_version):
-                latest_version = mid_version
-            else:
-                first_version = mid_version + 1
+        self.first_version = 1
+        self.latest_version = latest_version
+        self._get_first_bad_version()
 
-        self.first_bad_version = first_version
+    def _get_first_bad_version(self):
+        if self.first_version < self.latest_version:
+            mid_version = self.first_version + (self.latest_version - self.first_version) // 2
+            if SetBadVersion.is_bad_version(mid_version):
+                self.latest_version = mid_version
+                self._get_first_bad_version()
+            else:
+                self.first_version = mid_version + 1
+                self._get_first_bad_version()
+        else:
+            self.first_bad_version = self.first_version
