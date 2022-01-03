@@ -9,34 +9,27 @@ from beartype import beartype
 class SearchInsertPosition:
     @beartype
     def __init__(self: 'SearchInsertPosition', numbers: list[int], target: int) -> None:
+        numbers.append(target)
+        numbers = list(set(nums))
+        numbers.sort()
         self.numbers = numbers
-        self.target = target
+        self.target_number = target
         self.target_index = -1
         self.base_index = 0
-        self.end_index = len(numbers) - 1
+        self.end_index = len(self.numbers) - 1
         self.middle_index = -1
-        if target > numbers[-1]:
-            self.target_index = len(numbers)
-        elif target < numbers[0]:
-            self.target_index = 0
-        else:
-            self._search()
-            if self.target_index == -1:
-                if target > numbers[self.base_index]:
-                    self.target_index = self.base_index + 1
-                elif target < numbers[self.end_index]:
-                    self.target_index = self.end_index + 1
+        self._search()
 
     @beartype
     def _search(self: 'SearchInsertPosition') -> None:
-        if self.numbers[self.base_index] <= self.target <= self.numbers[self.end_index]:
+        if self.numbers[self.base_index] <= self.target_number <= self.numbers[self.end_index]:
             self.middle_index = self.base_index + (self.end_index - self.base_index) // 2
-            if self.numbers[self.middle_index] == self.target:
+            if self.numbers[self.middle_index] == self.target_number:
                 self.target_index = self.middle_index
-            elif self.numbers[self.middle_index] > self.target:
+            elif self.numbers[self.middle_index] > self.target_number:
                 self.end_index = self.middle_index - 1
                 self._search()
-            elif self.numbers[self.middle_index] < self.target:
+            elif self.numbers[self.middle_index] < self.target_number:
                 self.base_index = self.middle_index + 1
                 self._search()
 
