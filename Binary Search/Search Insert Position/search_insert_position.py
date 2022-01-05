@@ -10,7 +10,7 @@ class SearchInsertPosition:
     @beartype
     def __init__(self: 'SearchInsertPosition', numbers: list[int], target: int) -> None:
         numbers.append(target)
-        numbers = list(set(nums))
+        numbers = list(set(numbers))
         numbers.sort()
         self.numbers = numbers
         self.target_number = target
