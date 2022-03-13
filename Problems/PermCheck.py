@@ -7,18 +7,12 @@
 class Solution:
     @staticmethod
     def perm_check(a: list[int]) -> int:
-        a.sort()
-        large_number = a[-1]
-        if len(a) != large_number:
+        if len(a) != len(set(a)):
             return 0
-        else:
-            for i in range(1, large_number + 1):
-                if i in a:
-                    continue
-                else:
-                    return 0
-
+        elif sum(a) == sum(range(1, len(a)+1)):
             return 1
+        else:
+            return 0
 
 
 if __name__ == '__main__':
