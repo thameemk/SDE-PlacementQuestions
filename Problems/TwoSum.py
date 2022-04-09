@@ -1,16 +1,13 @@
 #  Project : SDE Placement Questions
-#  Filename : two_sum.py
+#  Filename : TwoSum.py
 #  Author : thameem
 #  Created  time : Wed, 29 Dec 2021 at 12:54 AM India Standard Time
 #  Last modified time : Thu, 11 Nov 2021 at 12:27 AM India Standard Time
-
-from beartype import beartype
 
 
 class Solution:
 
     @staticmethod
-    @beartype
     def two_sum(nums: list[int], target: int) -> list[int]:
         for i in range(0, len(nums)):
             for j in range(i + 1, len(nums)):
