@@ -11,14 +11,18 @@ class BalancedBrackets:
         for bracket in brackets:
             if bracket == '[':
                 stack.append(bracket)
+            elif bracket == ']' and stack[-1] == '[':
+                stack.pop()
             else:
-                pass
+                stack.append(bracket)
+
+        if not stack:
+            self.status = True
 
 
 if __name__ == '__main__':
     response = BalancedBrackets(brackets="[[[[][]]]]")
     print(response.status)
-
 
 """
 Question: https://www.educative.io/courses/learn-python-3-from-scratch/gkLkzNz48Q6
