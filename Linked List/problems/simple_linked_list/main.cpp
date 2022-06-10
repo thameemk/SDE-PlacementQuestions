@@ -8,6 +8,16 @@ public:
     Node *next;
 };
 
+void print_linked_list(Node* node)
+{
+    while (node!=NULL)
+    {
+        cout<<node->data<<"\n";
+        node = node->next;
+    }
+    
+}
+
 int main()
 {
     Node *head = new Node();
@@ -21,6 +31,7 @@ int main()
     third_node->data = 3;
     third_node->next = NULL;
 
+    print_linked_list(head);
     
     return 0;
 }
