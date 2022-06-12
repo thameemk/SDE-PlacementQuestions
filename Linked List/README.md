@@ -2,7 +2,7 @@
 
 - Linear Data Structure
 - Elements are not stored in continues memmory locations
-- Each elements are linked using pointers
+- Each elements are linked using pointers / reference field 
   
   **Advatages**
 
@@ -12,7 +12,7 @@
   **Drawbacks**
 - Caching doesn't work
 - Random access not possible
-- Additional memmory allocation for pointers
+- Additional memmory allocation for pointers / reference field
 
   **C++**
   ```cpp
@@ -36,4 +36,5 @@
   ```
 
   **Example**
-  - Simple linked list with 4 nodes
+  - Simple linked list with 4 nodes - [C++](problems/simple_linked_list/main.cpp) - [Python](problems/simple_linked_list/main.py)
+  - Inserting nodes - [C++](problems/inserting_nodes/main.cpp) - [Python](problems/inserting_nodes/main.py)
