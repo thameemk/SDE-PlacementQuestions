@@ -7,3 +7,4 @@
 
   **Problems**
   - Implementation using array - [C++](problems/implementation-using-array/main.cpp) - [Python](problems/implementation-using-array/main.py)
+  - Valid Paranthese - [Python](problems/valid-paranthese/main.py)
