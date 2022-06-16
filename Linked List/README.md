@@ -38,3 +38,4 @@
   **Example**
   - Simple linked list with 4 nodes - [C++](problems/simple_linked_list/main.cpp) - [Python](problems/simple_linked_list/main.py)
   - Inserting nodes - [C++](problems/inserting_nodes/main.cpp) - [Python](problems/inserting_nodes/main.py)
+  - Merge Two Sorted Linked Lists - [Python](problems/merge-two-sorted-linked-lists/)
