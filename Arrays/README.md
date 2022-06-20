@@ -8,7 +8,7 @@ char arr[] = {'a','b'}
 int arr[] = {1,2,3}
 ```
 
-Basic Array Operations
+### ***Basic Array Operations***
  - Insertion
  - Deletion
  - Traverse
@@ -18,3 +18,7 @@ Basic Array Operations
  - Move zeros to right
  - Reverse
  - Search
+
+
+### ***Problems***
+ - Remove Duplicates - [Python](problems/remove_duplicates/main.py) - [C++](problems/remove_duplicates/main.cpp)
