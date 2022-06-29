@@ -23,3 +23,4 @@ int arr[] = {1,2,3}
 ### ***Problems***
  - Remove Duplicates - [Python](problems/remove_duplicates/main.py) - [C++](problems/remove_duplicates/main.cpp)
  - Maximum Sub Array - [Python](problems/maximum_sub_array/main.py) - [C++](problems/maximum_sub_array/main.cpp)
+ - Plus One - [Python](problems/plus_one/main.py)
