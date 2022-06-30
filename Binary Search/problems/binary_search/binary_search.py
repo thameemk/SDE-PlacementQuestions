@@ -4,12 +4,9 @@
 #  Created  time : Wed, 29 Dec 2021 at 12:54 AM India Standard Time
 #  Last modified time : Wed, 29 Dec 2021 at 12:30 AM India Standard Time
 
-from beartype import beartype
-
 
 class BinarySearch:
-    @beartype
-    def __init__(self: 'BinarySearch', numbers: list[int], target_number: int) -> None:
+    def __init__(self, numbers: list[int], target_number: int) -> None:
         self.numbers = numbers
         self.target_number = target_number
         self.target_index = -1
@@ -18,10 +15,10 @@ class BinarySearch:
         self.middle_index = -1
         self._search()
 
-    @beartype
-    def _search(self: 'BinarySearch') -> None:
+    def _search(self) -> None:
         if self.numbers[self.base_index] <= self.target_number <= self.numbers[self.end_index]:
-            self.middle_index = self.base_index + (self.end_index - self.base_index) // 2
+            self.middle_index = self.base_index + \
+                (self.end_index - self.base_index) // 2
             if self.numbers[self.middle_index] == self.target_number:
                 self.target_index = self.middle_index
             elif self.numbers[self.middle_index] > self.target_number:
