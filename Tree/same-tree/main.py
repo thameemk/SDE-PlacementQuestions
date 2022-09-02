@@ -13,35 +13,18 @@ class TreeNode:
 
 
 class Solution:
-    #todo - not yet passed all test cases
     def is_same_tree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        if  self.inorder_traversal(p) ==  self.inorder_traversal(q):
+
+        if p is None and q is None:
             return True
-        else:
+
+        if p is None or q is None:
             return False
 
-    def inorder_traversal(self, root: Optional[TreeNode]) -> Optional[List[int]]:
-        if root is None:
-            return []
+        if p.val == q.val:
+            return self.is_same_tree(p.right, q.right) and self.is_same_tree(p.left, q.left)
 
-        response = []
-
-        if root.left is None and root.right is None:
-             response.append(root.val)
-        else:
-            if root.left is not None:
-                response.extend(self.inorder_traversal(root.left))
-            else:
-                response.append(0)
-
-            response.append(root.val)
-
-            if root.right is not None:
-                response.extend(self.inorder_traversal(root.right))
-            else:
-                response.append(0)
-
-        return response
+        return False
 
 
 if __name__ == '__main__':
