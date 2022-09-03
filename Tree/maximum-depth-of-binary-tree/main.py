@@ -21,28 +21,37 @@ class Solution:
         if root is None:
             return 0
 
-        return self._get_depth(root.left, root.right)
+        return self._get_depth(root.left, root.right)+1
 
     def _get_depth(self, left: Optional[TreeNode], right: Optional[TreeNode]) -> int:
 
-        self.depth = 0
-
         if left is None and right is None:
-            self.depth += 0
+            return 0
 
         elif left is None:
-            self.depth += self._get_depth(right.left, right.right)
+            return self._get_depth(right.left, right.right)+1
 
         elif right is None:
-            self.depth += self._get_depth(left.left, left.right)
+            return self._get_depth(left.left, left.right)+1
 
         else:
             _right_depth = self._get_depth(right.left, right.right)
             _left_depth = self._get_depth(left.left, left.right)
 
             if _right_depth > _left_depth:
-                self.depth += _right_depth
+                return _right_depth+1
             else:
-                self.depth += _left_depth
+                return _left_depth+1
 
-        return self.depth
+
+if __name__ == '__main__':
+
+    node = TreeNode()
+    node.val = 1
+
+    root = TreeNode()
+    root.val = 1
+    root.left = node
+
+    solution = Solution().max_depth(root)
+    print(solution)
