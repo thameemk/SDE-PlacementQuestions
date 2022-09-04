@@ -13,14 +13,14 @@ class TreeNode:
 
 
 class Solution:
-    def has_path_sum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+    def has_path_sum(self, root: Optional[TreeNode], target_sum: int) -> bool:
 
         if root is None:
             return False
 
-        if root.left is None and root.right is None and root.val == targetSum:
+        if root.left is None and root.right is None and root.val == target_sum:
             return True
 
-        targetSum -= root.val
+        target_sum -= root.val
 
-        return (self.has_path_sum(root.left, targetSum) or self.has_path_sum(root.right, targetSum))
+        return (self.has_path_sum(root.left, target_sum) or self.has_path_sum(root.right, target_sum))
