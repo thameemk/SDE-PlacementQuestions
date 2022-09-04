@@ -10,6 +10,17 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def has_path_sum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        pass
+
+        if root is None:
+            return False
+
+        if root.left is None and root.right is None and root.val == targetSum:
+            return True
+
+        targetSum -= root.val
+
+        return (self.has_path_sum(root.left, targetSum) or self.has_path_sum(root.right, targetSum))
