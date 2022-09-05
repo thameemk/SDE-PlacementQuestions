@@ -1,0 +1,7 @@
+{
+    "python.formatting.provider": "autopep8",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}

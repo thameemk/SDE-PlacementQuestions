@@ -1,6 +1,4 @@
 # Ignore files with extension `.exe`
 *.exe
 
-.vscode/*
-.idea/*
 venv/*
