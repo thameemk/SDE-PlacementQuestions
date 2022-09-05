@@ -36,7 +36,7 @@
   ```
 
   **Example**
-  - Simple linked list with 4 nodes - [C++](problems/simple_linked_list/main.cpp) - [Python](problems/simple_linked_list/main.py)
-  - Inserting nodes - [C++](problems/inserting_nodes/main.cpp) - [Python](problems/inserting_nodes/main.py)
-  - Merge Two Sorted Linked Lists - [Python](problems/merge-two-sorted-linked-lists/main.py)
-  - [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) - [Python](problems/remove-duplicates-from-sorted-list/main.py)
+  - Simple linked list with 4 nodes - [C++](simple_linked_list/main.cpp) - [Python](simple_linked_list/main.py)
+  - Inserting nodes - [C++](inserting_nodes/main.cpp) - [Python](inserting_nodes/main.py)
+  - Merge Two Sorted Linked Lists - [Python](merge-two-sorted-linked-lists/main.py)
+  - [Remove Duplicates from Sorted List](https://leetcode.com/remove-duplicates-from-sorted-list/) - [Python](remove-duplicates-from-sorted-list/main.py)

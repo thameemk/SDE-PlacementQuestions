@@ -6,5 +6,5 @@
 
 
   **Problems**
-  - Implementation using array - [C++](problems/implementation-using-array/main.cpp) - [Python](problems/implementation-using-array/main.py)
-  - Valid Paranthese - [Python](problems/valid-paranthese/main.py)
+  - Implementation using array - [C++](implementation-using-array/main.cpp) - [Python](implementation-using-array/main.py)
+  - Valid Paranthese - [Python](valid-paranthese/main.py)

@@ -21,7 +21,7 @@ int arr[] = {1,2,3}
 
 
 ### ***Problems***
- - Remove Duplicates - [Python](problems/remove_duplicates/main.py) - [C++](problems/remove_duplicates/main.cpp)
- - Maximum Sub Array - [Python](problems/maximum_sub_array/main.py) - [C++](problems/maximum_sub_array/main.cpp)
- - Plus One - [Python](problems/plus_one/main.py)
- - Merge Sorted Array - [Python](problems/merge_sorted_array/main.py)
+ - Remove Duplicates - [Python](remove_duplicates/main.py) - [C++](remove_duplicates/main.cpp)
+ - Maximum Sub Array - [Python](maximum_sub_array/main.py) - [C++](maximum_sub_array/main.cpp)
+ - Plus One - [Python](plus_one/main.py)
+ - Merge Sorted Array - [Python](merge_sorted_array/main.py)
