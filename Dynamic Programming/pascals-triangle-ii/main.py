@@ -15,8 +15,6 @@ class Solution:
     @staticmethod
     def get_row(row_index: int) -> List[int]:
 
-        # todo - return row itself without creating entire triangle
-
         pascals_triangle = [[1]]
 
         if row_index == 0:
@@ -33,3 +31,19 @@ class Solution:
             pascals_triangle[i].append(1)
 
         return pascals_triangle[row_index]
+
+    @staticmethod
+    def get_row_2(row_index) -> list[int]:
+        row_elements = (row_index + 1) * [1]
+
+        count = row_index
+
+        for i in range(1, row_index):
+            row_elements[i] = int(row_elements[i - 1] * count / i)
+            count -= 1
+
+        return row_elements
+
+
+if __name__ == '__main__':
+    print(Solution.get_row(3))
