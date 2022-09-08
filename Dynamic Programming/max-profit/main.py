@@ -10,6 +10,7 @@ Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 
 def max_profit(prices: list[int]) -> int:
+    # todo - not correct
     maximum_profit = 0
     for i in range(1, len(prices)):
         current_profit = prices[i] - prices[i - 1]
