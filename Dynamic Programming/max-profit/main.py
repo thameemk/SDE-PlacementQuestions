@@ -13,16 +13,18 @@ from typing import List
 
 
 def max_profit(prices: List[int]) -> int:
+
+    buy_at = 10000
     profit = 0
     maximum_profit = 0
-    max_price = 10000
-    for price in prices:
-        if price < max_price:
-            max_price = price
-        
-        profit = price - max_price
 
-        if maximum_profit<profit:
+    for price in prices:
+        if buy_at > price:
+            buy_at = price
+
+        profit = price - buy_at
+
+        if maximum_profit < profit:
             maximum_profit = profit
 
     return maximum_profit
