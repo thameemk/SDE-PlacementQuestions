@@ -9,13 +9,21 @@ Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 """
 
 
-def max_profit(prices: list[int]) -> int:
-    # todo - not correct
+from typing import List
+
+
+def max_profit(prices: List[int]) -> int:
+    profit = 0
     maximum_profit = 0
-    for i in range(1, len(prices)):
-        current_profit = prices[i] - prices[i - 1]
-        if prices[i] > prices[i - 1]:
-            maximum_profit = max(current_profit, maximum_profit)
+    max_price = 10000
+    for price in prices:
+        if price < max_price:
+            max_price = price
+        
+        profit = price - max_price
+
+        if maximum_profit<profit:
+            maximum_profit = profit
 
     return maximum_profit
 
