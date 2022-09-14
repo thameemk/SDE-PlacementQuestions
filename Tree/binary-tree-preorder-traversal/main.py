@@ -30,13 +30,3 @@ class Solution:
             response.extend(self.preorder_traversal(root.right))
 
         return response
-
-    # def _preorder_traversal(self, root: TreeNode) -> None:
-       
-    #     self.preorder_traversal_values.append(root.val)
-
-    #     if root.left:
-    #         self._preorder_traversal(root=root.left)
-        
-    #     if root.right:
-    #         self._preorder_traversal(root=root.right)
