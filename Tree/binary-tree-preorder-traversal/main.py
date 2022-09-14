@@ -15,20 +15,28 @@ class TreeNode:
 
 class Solution:
     def preorder_traversal(self, root: Optional[TreeNode]) -> List[int]:
-        self.preorder_traversal_values = []
+
         if root is None:
-            return self.preorder_traversal_values
+            return []
 
-        self._preorder_traversal(root=root)
+        response = []
 
-        return self.preorder_traversal_values
-
-    def _preorder_traversal(self, root: TreeNode) -> None:
-       
-        self.preorder_traversal_values.append(root.val)
+        response.append(root.val)
 
         if root.left:
-            self._preorder_traversal(root=root.left)
-        
+            response.extend(self.preorder_traversal(root.left))
+
         if root.right:
-            self._preorder_traversal(root=root.right)
+            response.extend(self.preorder_traversal(root.right))
+
+        return response
+
+    # def _preorder_traversal(self, root: TreeNode) -> None:
+       
+    #     self.preorder_traversal_values.append(root.val)
+
+    #     if root.left:
+    #         self._preorder_traversal(root=root.left)
+        
+    #     if root.right:
+    #         self._preorder_traversal(root=root.right)
