@@ -11,4 +11,13 @@ Tags: Math, String
 
 
 def convert_to_title(column_number: int) -> str:
-    pass
+    alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    if column_number <= 26:
+        return alphabets[column_number - 1]
+
+    return convert_to_title((column_number-1) // 26) + convert_to_title(column_number % 26)
+
+
+if __name__ == '__main__':
+    print(convert_to_title(701))
