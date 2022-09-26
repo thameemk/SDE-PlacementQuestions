@@ -23,12 +23,16 @@ class Solution:
     def get_intersection_node(head_a: ListNode, head_b: ListNode) -> Optional[ListNode]:
         hash_map = {}
 
-        while head_a is not None:
-            hash_map[id(head_a)] = head_a
-            head_a = head_a.next
+        t_head_a = head_a
+        t_head_b = head_b
 
-        while head_b is not None:
-            if id(head_b) in hash_map:
-                return head_b
+        while t_head_a is not None:
+            hash_map[id(t_head_a)] = t_head_a
+            t_head_a = t_head_a.next
+
+        while t_head_b is not None:
+            if id(t_head_b) in hash_map:
+                return t_head_b
+            t_head_b = t_head_b.next
 
         return None
