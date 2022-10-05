@@ -16,12 +16,16 @@ def is_isomorphic(s: str, t: str) -> bool:
         return False
 
     hash_map = {}
-
+    # todo - consider all test cases
     for index, each in enumerate(s):
         if each not in hash_map:
             hash_map[each] = index
             t_chara = t[index]
-            t = t.replace(t_chara, each)
+            first_part = t[:index]
+            second_part = t[index:]
+            second_part = second_part.replace(t_chara, each)
+            t = first_part + second_part
+            a = 1
 
     if t == s:
         return True
@@ -30,4 +34,4 @@ def is_isomorphic(s: str, t: str) -> bool:
 
 
 if __name__ == '__main__':
-    print(is_isomorphic("egg", "add"))
+    print(is_isomorphic("badc", "baba"))
