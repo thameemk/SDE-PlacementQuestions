@@ -11,8 +11,7 @@ from typing import List
 
 
 def contains_duplicate(nums: List[int]) -> bool:
-    set_nums = list(set(nums))
-    if len(set_nums) == len(nums):
+    if len(list(set(nums))) == len(nums):
         return False
     else:
         return True
