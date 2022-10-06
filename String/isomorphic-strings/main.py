@@ -18,9 +18,9 @@ def is_isomorphic(s: str, t: str) -> bool:
     hash_map = {}
     # todo - consider all test cases
     for index, each in enumerate(s):
-        if each not in hash_map:
-            hash_map[each] = index
-            t_chara = t[index]
+        t_chara = t[index]
+        if t_chara not in hash_map:
+            hash_map[t_chara] = index
             first_part = t[:index]
             second_part = t[index:]
             second_part = second_part.replace(t_chara, each)
@@ -34,4 +34,7 @@ def is_isomorphic(s: str, t: str) -> bool:
 
 
 if __name__ == '__main__':
+    print(is_isomorphic("egg", "add"))
+    print(is_isomorphic("foo", "bar"))
+    print(is_isomorphic("paper", "title"))
     print(is_isomorphic("badc", "baba"))
