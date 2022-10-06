@@ -11,10 +11,7 @@ from typing import List
 
 
 def contains_duplicate(nums: List[int]) -> bool:
-    if len(list(set(nums))) == len(nums):
-        return False
-    else:
-        return True
+    return len(list(set(nums))) != len(nums)
 
 
 if __name__ == '__main__':
