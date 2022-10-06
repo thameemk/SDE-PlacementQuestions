@@ -1,5 +1,5 @@
 #  Project : SDE Placement Questions
-#  Filename : contains_duplicate.py
+#  Filename : main.py
 #  Author : thameem
 #  Current modification time : Thu, 6 Oct 2022 at 10:42 pm India Standard Time
 #  Last modified time : Thu, 6 Oct 2022 at 10:42 pm India Standard Time
