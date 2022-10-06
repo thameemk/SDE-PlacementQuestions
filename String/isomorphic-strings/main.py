@@ -1,8 +1,8 @@
 #  Project : SDE Placement Questions
 #  Filename : main.py
-#  Author : blacklist
-#  Current modification time : Wed, 5 Oct 2022 at 10:27 pm India Standard Time
-#  Last modified time : Wed, 5 Oct 2022 at 10:27 pm India Standard Time
+#  Author : thameem
+#  Current modification time : Thu, 6 Oct 2022 at 10:27 pm India Standard Time
+#  Last modified time : Wed, 5 Oct 2022 at 11:40 pm India Standard Time
 
 
 """
