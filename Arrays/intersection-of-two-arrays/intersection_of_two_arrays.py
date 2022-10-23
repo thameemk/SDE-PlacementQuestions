@@ -11,14 +11,9 @@ def intersection(nums1: list[int], nums2: list[int]) -> list[int]:
 
     _intersection = set()
 
-    if len(nums1) > (len(nums2)):
-        for num in nums2:
-            if num in nums1:
-                _intersection.add(num)
-    else:
-        for num in nums1:
-            if num in nums2:
-                _intersection.add(num)
+    for num in nums1:
+        if num in nums2:
+            _intersection.add(num)
 
     return list(_intersection)
 
