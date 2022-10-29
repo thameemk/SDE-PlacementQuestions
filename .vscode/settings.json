@@ -2,7 +2,8 @@
     "python.formatting.provider": "autopep8",
     "files.associations": {
         "iostream": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
