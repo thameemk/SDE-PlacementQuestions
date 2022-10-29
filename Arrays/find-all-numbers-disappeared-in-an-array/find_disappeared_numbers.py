@@ -5,7 +5,9 @@ from typing import List
 
 def find_disappeared_numbers(nums: List[int]) -> List[int]:
 
-    return [i for i in range(1, len(nums)+1) if i not in nums]
+    set_nums = set(nums)
+
+    return [i for i in range(1, len(nums)+1) if i not in set_nums]
 
 
 if __name__ == '__main__':
