@@ -21,14 +21,3 @@ if __name__ == '__main__':
     print(find_poisoned_duration([1, 4], 2))
     print(find_poisoned_duration([1, 2], 2))
     print(find_poisoned_duration([1, 2, 3, 4, 5, 6, 7, 8, 9], 100000))
-
-"""
-1-> 1 to 3 -> 2s
-4-> 4 to 6 -> 2s
-total      -> 4s
-
-
-1-> 1 to 3 -> 2s
-2-> 2 to 4 -> 2s
-at 3 reset -> total -> 3s
-"""
