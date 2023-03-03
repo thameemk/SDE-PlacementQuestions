@@ -5,6 +5,8 @@ Link: https://leetcode.com/problems/add-two-numbers/submissions/
 Tags: Linked List, Math, Recusrion
 """
 
+from typing import Optional
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
