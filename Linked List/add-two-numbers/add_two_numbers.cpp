@@ -39,21 +39,28 @@ public:
         }
 
         int sum = stoi(first_num) + stoi(second_num);
-        
-        ListNode* res = new ListNode();
-        
-        ListNode* temp = res;
-        
-        while(sum)
+
+        ListNode *res = new ListNode();
+
+        ListNode *temp = res;
+
+        if (sum != 0)
         {
-            int digit = sum%10;
-            sum = sum/10;
-            
-            temp->next = new ListNode(digit);
-            temp = temp->next;
-            
+            while (sum)
+            {
+                int digit = sum % 10;
+                sum = sum / 10;
+
+                temp->next = new ListNode(digit);
+                temp = temp->next;
+            }
+            return res->next;
         }
-        
-        return res->next;
+
+        else
+        {
+            res->val = 0;
+            return res;
+        }
     }
 };
