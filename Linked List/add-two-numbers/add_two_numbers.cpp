@@ -23,7 +23,7 @@ public:
             ListNode *num = l1;
             while (num)
             {
-                first_num = first_num + to_string(num->val);
+                first_num = to_string(num->val)+first_num;
                 num = num->next;
             }
         }
@@ -33,7 +33,7 @@ public:
             ListNode *num = l2;
             while (num)
             {
-                second_num = second_num + to_string(num->val);
+                second_num = to_string(num->val)+second_num;
                 num = num->next;
             }
         }
