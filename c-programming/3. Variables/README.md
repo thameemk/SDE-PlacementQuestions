@@ -45,3 +45,9 @@ Rules of naming variables
 - Must start with an alphabet or an underscore only. It cannot start with a digit.
 - No whitespace is allowed.
 - Must not be any reserved word or keyword.
+
+Types of Variables in C
+- Based on scope
+- Based on storage class
+
+Constant Variable
