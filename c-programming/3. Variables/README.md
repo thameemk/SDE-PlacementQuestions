@@ -18,6 +18,28 @@ Three aspects of defining variable
 - Variable definition - the compiler allocates some memory and some value to it. A defined variable will contain some random garbage value till it is not initialized.
 - Variable initialization - the user assigns some meaningful value to the variable.
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    // declaration with defnition
+    int num;
+    printf("defined number: %d\n", num);
+
+    // initialization
+    num = 10;
+
+    // declaration + definition + initialization
+    int num_2 = 20;
+
+    printf("num after initialization: %d\n",num);
+    printf("num_2: %d", num_2);
+
+    return 0;
+}
+```
+
 Rules of naming variables
 - Must only contain alphabets, digits, and underscore.
 - Must start with an alphabet or an underscore only. It cannot start with a digit.
