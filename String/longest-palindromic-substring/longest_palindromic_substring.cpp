@@ -6,7 +6,7 @@ string check_palindrome(int l, int r, string res, string s)
 {
     while (l >= 0 and r < s.length() and s[l] == s[r])
     {
-        if ((r - l - 1) > res.length())
+        if ((r - l + 1) > res.length())
         {
             res = s.substr(l, r + 1);
         }
@@ -21,7 +21,6 @@ string check_palindrome(int l, int r, string res, string s)
 string longestPalindrome(string s)
 {
     string res = "";
-    int res_len = 0;
 
     for (int i = 0; i < s.length(); i++)
     {
