@@ -3,11 +3,14 @@
 #  Author : thameem
 #  Current modification time : Mon, 15 May 2023 at 9:25 pm India Standard Time
 #  Last modified time : Mon, 15 May 2023 at 9:25 pm India Standard Time
+from beartype import beartype
+
 
 # Link: https://leetcode.com/problems/3sum/
 
 
-def three_sum(nums: list[int]) -> list[list[int]]:
+@beartype
+def three_sum(nums: list[int]) -> list[tuple[int, int, int]]:
     len_of_array = len(nums)
 
     nums.sort()
